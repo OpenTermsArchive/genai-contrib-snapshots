@@ -2144,7 +2144,7 @@
 
     
     <aside class="md:col md:max-w-12 hidden" x-data="{ tableOfContents: false }">
-      <div :class="{ 'sticky top-0': tableOfContents }" @table-of-contents:render.camel="tableOfContents = $event.target.children.length > 0">
+      <div :class="{ 'sticky top-0': tableOfContents }" @table-of-contents:render.camel="tableOfContents = $event.target.children.length &gt; 0">
 
         </div>
     </aside>
@@ -2195,7 +2195,7 @@
       <ul class="nav nav-tabs nav-justified">
         &lt;% children.forEach(function(child, index) { %&gt;
           <li class="nav-item bg-white sm:bg-transparent">
-            <a class="nav-link flex align-items-center justify-content-center font-semibold font-size-lg text-gray-700 px-2 py-4 hover:text-gray-800 hover:bg-gray-100<% if (initial === index ) { %> is-active bg-gray-100 md:bg-transparent is-shown<% } %>" data-toggle="tab" data-active-class="bg-gray-100 md:bg-transparent" aria-expanded="<%= initial === index %>" href="#<%= id %>-<%= index %>">
+            <a class="nav-link flex align-items-center justify-content-center font-semibold font-size-lg text-gray-700 px-2 py-4 hover:text-gray-800 hover:bg-gray-100&lt;% if (initial === index ) { %&gt; is-active bg-gray-100 md:bg-transparent is-shown&lt;% } %&gt;" data-toggle="tab" data-active-class="bg-gray-100 md:bg-transparent" aria-expanded="&lt;%= initial === index %&gt;" href="#&lt;%= id %&gt;-&lt;%= index %&gt;">
               &lt;% if (child.title === 'On Web') { %&gt;
                 <svg class="fill-current mr-2" xmlns="http://www.w3.org/2000/svg" width="1.2rem" height="1.2rem" viewBox="0 0 48 48"><g fill="none"><rect width="40" height="32" x="4" y="8" stroke="currentColor" stroke-linejoin="round" stroke-width="4" rx="3"></rect><path stroke="currentColor" stroke-width="4" d="M4 11a3 3 0 0 1 3-3h34a3 3 0 0 1 3 3v9H4z"></path><circle r="2" fill="currentColor" transform="matrix(0 -1 -1 0 10 14)"></circle><circle r="2" fill="currentColor" transform="matrix(0 -1 -1 0 16 14)"></circle></g></svg>
               &lt;% } %&gt;
@@ -2209,7 +2209,7 @@
       </ul>
       <div class="tabs">
         &lt;% children.forEach(function(child, index) { %&gt;
-          <div class="tab list-unstyled p-6 bg-white border border-radius-bottom fade<% if (initial === index ) { %> is-active is-shown<% } %>" id="<%= id %>-<%= index %>" role="tab-panel">
+          <div class="tab list-unstyled p-6 bg-white border border-radius-bottom fade&lt;% if (initial === index ) { %&gt; is-active is-shown&lt;% } %&gt;" id="&lt;%= id %&gt;-&lt;%= index %&gt;" role="tab-panel">
             &lt;%= child.innerHTML %&gt;
           </div>
         &lt;% }) %&gt;
@@ -2221,7 +2221,7 @@
 
   <template id="tmpl-carousel">
   &lt;% if (children.length) { %&gt;
-    <div class="md:m-5" x-data="{ active: 1 }" x-on:carousel:next="active++; $nextTick(() => { calculateMaxHeight() })" x-on:carousel:previous="active--; $nextTick(() => { calculateMaxHeight() })">
+    <div class="md:m-5" x-data="{ active: 1 }" x-on:carousel:next="active++; $nextTick(() =&gt; { calculateMaxHeight() })" x-on:carousel:previous="active--; $nextTick(() =&gt; { calculateMaxHeight() })">
       <div class="p-6 mb-4 border border-radius bg-white border-top border-top-4 border-top-primary shadow-lg">
         <ul class="list-unstyled">
           &lt;% children.forEach(function(child, index) { %&gt;
@@ -2687,14 +2687,14 @@
     <div class="collapse lg:expand lg:flex-column" id="sidebar-navigation">
       <ul class="list-unstyled font-size-lg w-full">
         &lt;% categories.forEach(function(category, index) { %&gt;
-          <li class="font-semibold" x-data="toggle({ isOpen: <%= !!category.isActive %> })" @collapse:show.stop="open" @collapse:hide.stop="close">
+          <li class="font-semibold" x-data="toggle({ isOpen: &lt;%= !!category.isActive %&gt; })" @collapse:show.stop="open" @collapse:hide.stop="close">
 
             
             <div class="flex justify-content-between align-items-center">
-              <a class="flex-1 py-3 text-inherit" :class="{ 'text-inherit': !isOpen }" href="<%= category.html_url %>">
+              <a class="flex-1 py-3 text-inherit" :class="{ 'text-inherit': !isOpen }" href="&lt;%= category.html_url %&gt;">
                 &lt;%= category.name %&gt;
               </a>
-              <button class="p-2 ml-1 not-a-button border-radius transition cursor-pointer hover:bg-gray-200 hidden lg:block" :class="{ 'is-active': isOpen }" :aria-expanded="isOpen" data-toggle="collapse" data-target="#category-<%= category.id %>">
+              <button class="p-2 ml-1 not-a-button border-radius transition cursor-pointer hover:bg-gray-200 hidden lg:block" :class="{ 'is-active': isOpen }" :aria-expanded="isOpen" data-toggle="collapse" data-target="#category-&lt;%= category.id %&gt;">
                 <svg class="text-inherit fill-current pointer-events-none" :class="{ 'rotate-180': isOpen }" width="12px" height="12px" viewBox="0 0 324 190" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                   <path d="M162,190 C156,190 150,187 146,183 L7,38 C-2,29 -2,15 7,7 C16,-2 30,-2 39,7 L162,135 L285,7 C293,-2 308,-2 317,7 C326,15 326,29 317,38 L178,183 C174,187 168,190 162,190 Z"></path>
                 </svg>
@@ -2723,16 +2723,16 @@
 
 <template id="tmpl-partial-article-list-sections">
   &lt;% if (sections.length) { %&gt;
-    <ul class="list-none pl-3 mb-0 font-size-base collapse" id="<%= id %>" :class="{ 'is-visible': isOpen }" data-parent="<%= parentId %>">
+    <ul class="list-none pl-3 mb-0 font-size-base collapse" id="&lt;%= id %&gt;" :class="{ 'is-visible': isOpen }" data-parent="&lt;%= parentId %&gt;">
       &lt;% sections.forEach(function(section) { %&gt;
-        <li class="font-medium" x-data="toggle({ isOpen: <%= !!section.isActive %> })" @collapse:show.stop="open" @collapse:hide.stop="close">
+        <li class="font-medium" x-data="toggle({ isOpen: &lt;%= !!section.isActive %&gt; })" @collapse:show.stop="open" @collapse:hide.stop="close">
 
           
           <div class="flex justify-content-between align-items-center">
-            <a class="flex-1 py-2 text-inherit font-semibold" :class="{ 'text-inherit': !isOpen }" href="<%= section.html_url %>">
+            <a class="flex-1 py-2 text-inherit font-semibold" :class="{ 'text-inherit': !isOpen }" href="&lt;%= section.html_url %&gt;">
               &lt;%= section.name %&gt;
             </a>
-            <button class="p-2 ml-1 not-a-button border-radius transition cursor-pointer hover:bg-gray-200" :class="{ 'is-active': isOpen }" :aria-expanded="isOpen" data-toggle="collapse" data-target="#section-<%= section.id %>">
+            <button class="p-2 ml-1 not-a-button border-radius transition cursor-pointer hover:bg-gray-200" :class="{ 'is-active': isOpen }" :aria-expanded="isOpen" data-toggle="collapse" data-target="#section-&lt;%= section.id %&gt;">
               <svg class="text-inherit fill-current pointer-events-none" :class="{ 'rotate-180': isOpen }" width="12px" height="12px" viewBox="0 0 324 190" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <path d="M162,190 C156,190 150,187 146,183 L7,38 C-2,29 -2,15 7,7 C16,-2 30,-2 39,7 L162,135 L285,7 C293,-2 308,-2 317,7 C326,15 326,29 317,38 L178,183 C174,187 168,190 162,190 Z"></path>
               </svg>
@@ -2752,10 +2752,10 @@
 
           
           &lt;% if (section.articles.length) { %&gt;
-            <ul class="list-none font-size-md pl-0 mb-0 collapse" :class="{ 'is-visible': isOpen }" id="section-<%= section.id %>" data-parent="#<%= id %>">
+            <ul class="list-none font-size-md pl-0 mb-0 collapse" :class="{ 'is-visible': isOpen }" id="section-&lt;%= section.id %&gt;" data-parent="#&lt;%= id %&gt;">
               &lt;% section.articles.forEach(function(article) { %&gt;
                 <li>
-                  <a class="block px-3 py-2 text-inherit border-radius transition<% if (article.isActive) { %> bg-gray-100<% } %>" href="<%= article.html_url %>">
+                  <a class="block px-3 py-2 text-inherit border-radius transition&lt;% if (article.isActive) { %&gt; bg-gray-100&lt;% } %&gt;" href="&lt;%= article.html_url %&gt;">
                     &lt;%= article.title %&gt;
                   </a>
                 </li>
@@ -2783,7 +2783,7 @@
   
   <div class="row row-sm">
     &lt;% articles.forEach(function(article) { %&gt;
-      <div class="<%= getColumnClasses(3) %>">
+      <div class="&lt;%= getColumnClasses(3) %&gt;">
         <div class="media align-items-baseline py-2">
           
             <span class="flex align-items-center justify-content-center w-4">
@@ -2793,7 +2793,7 @@
           <div class="media-body text-base ml-3">
               &lt;% if (excerptLength &gt; 0 &amp;&amp; article.body) { %&gt;
                 <h3 class="my-0">
-                  <a class="link-stretched text-inherit hover:no-underline" href="<%= article.html_url %>">
+                  <a class="link-stretched text-inherit hover:no-underline" href="&lt;%= article.html_url %&gt;">
                     &lt;%= article.title %&gt;
                   </a>
                 </h3>
@@ -2802,7 +2802,7 @@
                   &lt;%= Util.getExcerpt(article.body, 147) %&gt;
                 </p>
                &lt;% } else { %&gt;
-                 <a class="link-stretched text-inherit<% if (article.promoted) { %> font-bold<% } %>" href="<%= article.html_url %>">
+                 <a class="link-stretched text-inherit&lt;% if (article.promoted) { %&gt; font-bold&lt;% } %&gt;" href="&lt;%= article.html_url %&gt;">
                    &lt;%= article.title %&gt;
                  </a>
               &lt;% } %&gt;
