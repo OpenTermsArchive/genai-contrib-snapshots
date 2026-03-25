@@ -2,10 +2,108 @@
 <html>
   <head>
     <title>Terms of Service - AI Music Generator SOUNDRAW</title>
-    <script nonce="">
-//<![CDATA[
-window.gon={};gon.is_ios=false;gon.show_campaign_banner=false;gon.use_sale_campaign_discount=false;
-//]]>
+    <script nonce="" type="text/javascript">(function() {
+  var root = window;
+  var initialData = {"device":{"ios":false},"campaign":{"showBanner":false,"useSaleDiscount":false}};
+  var isPlainObject = function(value) {
+    return Object.prototype.toString.call(value) === "[object Object]";
+  };
+
+  var ensureStore = function() {
+    if (!isPlainObject(root.__APP_CONFIG__)) {
+      root.__APP_CONFIG__ = {};
+    }
+
+    return root.__APP_CONFIG__;
+  };
+
+  var deepMerge = function(target, source) {
+    if (!isPlainObject(source)) {
+      return target;
+    }
+
+    Object.keys(source).forEach(function(key) {
+      var nextValue = source[key];
+
+      if (isPlainObject(nextValue)) {
+        var currentValue = target[key];
+        if (!isPlainObject(currentValue)) {
+          currentValue = {};
+        }
+
+        target[key] = deepMerge(currentValue, nextValue);
+        return;
+      }
+
+      target[key] = nextValue;
+    });
+
+    return target;
+  };
+
+  var getPath = function(path, fallback) {
+    if (!path) {
+      return root.__APP_CONFIG__;
+    }
+
+    var keys = String(path).split(".");
+    var currentValue = root.__APP_CONFIG__;
+
+    for (var i = 0; i < keys.length; i += 1) {
+      if (currentValue == null || typeof currentValue !== "object" || !(keys[i] in currentValue)) {
+        return fallback;
+      }
+
+      currentValue = currentValue[keys[i]];
+    }
+
+    return currentValue;
+  };
+
+  var setPath = function(path, value) {
+    if (!path) {
+      return value;
+    }
+
+    var keys = String(path).split(".");
+    var currentValue = root.__APP_CONFIG__;
+
+    for (var i = 0; i < keys.length - 1; i += 1) {
+      if (!isPlainObject(currentValue[keys[i]])) {
+        currentValue[keys[i]] = {};
+      }
+
+      currentValue = currentValue[keys[i]];
+    }
+
+    currentValue[keys[keys.length - 1]] = value;
+    return value;
+  };
+
+  var store = ensureStore();
+  deepMerge(store, initialData);
+  var existingApi = root.appConfig && typeof root.appConfig === "object" ? root.appConfig : {};
+
+  existingApi.get = function(path, fallback) {
+    return getPath(path, fallback);
+  };
+
+  existingApi.set = function(path, value) {
+    return setPath(path, value);
+  };
+
+  existingApi.merge = function(value) {
+    deepMerge(store, value);
+    return store;
+  };
+
+  existingApi.all = function() {
+    return store;
+  };
+
+  root.__APP_CONFIG__ = store;
+  root.appConfig = existingApi;
+})();
 </script>
     <link rel="canonical" href="https://soundraw.io/terms">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,7 +140,7 @@ window.gon={};gon.is_ios=false;gon.show_campaign_banner=false;gon.use_sale_campa
     <meta property="twitter:image" content="https://cdn.soundraw.io/soundraw_ogp_EN.png">
     <meta name="csp-nonce" content="" />
     <link rel="icon" type="image/x-icon" href="/assets/favicon-65fa692e0ba06519edfaf3224c823528eb2cec9997a3443c9d8d13bf8cb312f3.ico" />
-      <script src="/assets/sentry-338f0eca2ed1882bb9a2549afc48266bc971b816d6f34b62a214a3d7d9f19a4e.js" data-turbo-track="reload" nonce=""></script>
+      <script src="/assets/sentry-0b3968d54d00cc0025736ed9cbd47f7b975f91b7125390aa82c2407d6c3b7060.js" data-turbo-track="reload" nonce=""></script>
       <script src="https://api.goaffpro.com/loader.js?shop=esmixx3wyt" nonce=""></script>
     <link rel="stylesheet" href="/assets/application-02e4e585d99c34d9b1144107f54b9bc9b52ff37d3a8f5928e11c9c31c47c5284.css" media="all" data-turbolinks-track="reload" nonce="" />
     <script src="https://code.iconify.design/iconify-icon/1.0.0/iconify-icon.min.js" nonce=""></script>
@@ -525,14 +623,14 @@ button.icon-close:active {
 
 //]]>
 </script>
-    <script src="/assets/application-bce1810a30663ae477311b060c230a7f23941feb4646595b26f678089e4fde68.js" data-turbo-track="reload" nonce=""></script>
+    <script src="/assets/application-120638448f06b328aabcc4a44e1dffdf4776fd5a633ebeef5e82950398f11639.js" data-turbo-track="reload" nonce=""></script>
   </head>
 
   <body lang="en" class="bg-dark 100vh" >
     <link rel="stylesheet" href="/assets/tailwind-e9ac589859cb12236137ff136296b8b91cbf19526eaddf59120cafb3a993e1d7.css" />
     <div class="sticky top-0 left-0 w-full bg-dark z-40">
       <div id="header">
-        <script src="/assets/header-a170ef402fdfa6bd81f6b1a5036524bbbe50ed05fd8911a464fd98833d025e1c.js" nonce=""></script>
+        <script src="/assets/header-87c2ff23310ade20c9654f86b17e958fffed90b5690337d698f084fc60ee3da5.js" nonce=""></script>
       </div>
       
     </div>
