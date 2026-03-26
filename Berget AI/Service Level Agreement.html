@@ -9,8 +9,17 @@
     <title>SLA - Berget AI</title><meta property="og:title" content="SLA - Berget AI">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" type="image/svg+xml" href="/logos/berget-icon-black.svg" media="(prefers-color-scheme: light)"><link rel="icon" type="image/svg+xml" href="/logos/berget-icon-white.svg" media="(prefers-color-scheme: dark)"><meta name="keywords" content="AI cloud, secure cloud, compliant cloud, sustainable infrastructure, AI applications, Europe cloud service"><meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="//api.berget.ai"><link rel="preconnect" href="//api.berget.ai" crossorigin=""><link rel="canonical" href="https://berget.ai/sla"><meta property="og:url" content="https://berget.ai/sla"><meta property="og:type" content="website"><meta property="og:site_name" content="Berget AI"><meta property="og:locale" content="en_US"><script defer="" src="https://umami.berget.ai/script.js" data-website-id="5e13741c-8eec-41a0-81ba-c808976d808c" data-tag="main" data-domains="berget.ai" data-before-send="prefixHostname"></script><script>
-            function prefixHostname(payload) {
-              payload.url = '/' + window.location.hostname + payload.url;
+            window.prefixHostname = function(type, payload) {
+              if (!payload || typeof payload !== 'object') {
+                return payload;
+              }
+              if (typeof payload.url === 'string') {
+                const url = new URL(payload.url, window.location.href);
+                return {
+                  ...payload,
+                  url: '/' + window.location.hostname + url.pathname
+                };
+              }
               return payload;
             }
           </script>
