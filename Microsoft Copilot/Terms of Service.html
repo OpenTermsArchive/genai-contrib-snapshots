@@ -41,7 +41,7 @@
 
     
     
-        <link rel="stylesheet" href="/en-us/microsoft-copilot/for-individuals/css/global.min.css?v=KJJUHxNvGPmD_Lsgdq47vVk96PMvZDAyg257PpjD18Q">
+        <link rel="stylesheet" href="/en-us/microsoft-copilot/for-individuals/css/global.min.css?v=Ra8RT5VexfczhcMCCb3h690OQh_lVcsQBdTRH2OVbmU">
     
 
     <script type="text/javascript">!function(T,l,y){var S=T.location,k="script",D="instrumentationKey",C="ingestionendpoint",I="disableExceptionTracking",E="ai.device.",b="toLowerCase",w="crossOrigin",N="POST",e="appInsightsSDK",t=y.name||"appInsights";(y.name||T[e])&&(T[e]=t);var n=T[t]||function(d){var g=!1,f=!1,m={initialize:!0,queue:[],sv:"5",version:2,config:d};function v(e,t){var n={},a="Browser";return n[E+"id"]=a[b](),n[E+"type"]=a,n["ai.operation.name"]=S&&S.pathname||"_unknown_",n["ai.internal.sdkVersion"]="javascript:snippet_"+(m.sv||m.version),{time:function(){var e=new Date;function t(e){var t=""+e;return 1===t.length&&(t="0"+t),t}return e.getUTCFullYear()+"-"+t(1+e.getUTCMonth())+"-"+t(e.getUTCDate())+"T"+t(e.getUTCHours())+":"+t(e.getUTCMinutes())+":"+t(e.getUTCSeconds())+"."+((e.getUTCMilliseconds()/1e3).toFixed(3)+"").slice(2,5)+"Z"}(),iKey:e,name:"Microsoft.ApplicationInsights."+e.replace(/-/g,"")+"."+t,sampleRate:100,tags:n,data:{baseData:{ver:2}}}}var h=d.url||y.src;if(h){function a(e){var t,n,a,i,r,o,s,c,u,p,l;g=!0,m.queue=[],f||(f=!0,t=h,s=function(){var e={},t=d.connectionString;if(t)for(var n=t.split(";"),a=0;a<n.length;a++){var i=n[a].split("=");2===i.length&&(e[i[0][b]()]=i[1])}if(!e[C]){var r=e.endpointsuffix,o=r?e.location:null;e[C]="https://"+(o?o+".":"")+"dc."+(r||"services.visualstudio.com")}return e}(),c=s[D]||d[D]||"",u=s[C],p=u?u+"/v2/track":d.endpointUrl,(l=[]).push((n="SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)",a=t,i=p,(o=(r=v(c,"Exception")).data).baseType="ExceptionData",o.baseData.exceptions=[{typeName:"SDKLoadFailed",message:n.replace(/\./g,"-"),hasFullStack:!1,stack:n+"\nSnippet failed to load ["+a+"] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: "+(S&&S.pathname||"_unknown_")+"\nEndpoint: "+i,parsedStack:[]}],r)),l.push(function(e,t,n,a){var i=v(c,"Message"),r=i.data;r.baseType="MessageData";var o=r.baseData;return o.message='AI (Internal): 99 message:"'+("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) ("+n+")").replace(/\"/g,"")+'"',o.properties={endpoint:a},i}(0,0,t,p)),function(e,t){if(JSON){var n=T.fetch;if(n&&!y.useXhr)n(t,{method:N,body:JSON.stringify(e),mode:"cors"});else if(XMLHttpRequest){var a=new XMLHttpRequest;a.open(N,t),a.setRequestHeader("Content-type","application/json"),a.send(JSON.stringify(e))}}}(l,p))}function i(e,t){f||setTimeout(function(){!t&&m.core||a()},500)}var e=function(){var n=l.createElement(k);n.src=h;var e=y[w];return!e&&""!==e||"undefined"==n[w]||(n[w]=e),n.onload=i,n.onerror=a,n.onreadystatechange=function(e,t){"loaded"!==n.readyState&&"complete"!==n.readyState||i(0,t)},n}();y.ld<0?l.getElementsByTagName("head")[0].appendChild(e):setTimeout(function(){l.getElementsByTagName(k)[0].parentNode.appendChild(e)},y.ld||0)}try{m.cookie=l.cookie}catch(p){}function t(e){for(;e.length;)!function(t){m[t]=function(){var e=arguments;g||m.queue.push(function(){m[t].apply(m,e)})}}(e.pop())}var n="track",r="TrackPage",o="TrackEvent";t([n+"Event",n+"PageView",n+"Exception",n+"Trace",n+"DependencyData",n+"Metric",n+"PageViewPerformance","start"+r,"stop"+r,"start"+o,"stop"+o,"addTelemetryInitializer","setAuthenticatedUserContext","clearAuthenticatedUserContext","flush"]),m.SeverityLevel={Verbose:0,Information:1,Warning:2,Error:3,Critical:4};var s=(d.extensionConfig||{}).ApplicationInsightsAnalytics||{};if(!0!==d[I]&&!0!==s[I]){var c="onerror";t(["_"+c]);var u=T[c];T[c]=function(e,t,n,a,i){var r=u&&u(e,t,n,a,i);return!0!==r&&m["_"+c]({message:e,url:t,lineNumber:n,columnNumber:a,error:i}),r},d.autoExceptionInstrumented=!0}return m}(y.cfg);function a(){y.onInit&&y.onInit(n)}(T[t]=n).queue&&0===n.queue.length?(n.queue.push(a),n.trackPageView({})):a()}(window,document,{
@@ -526,7 +526,7 @@ cfg: { // Application Insights Configuration
 <div class="copilot-app for-individuals" id="learn" data-bi-id="a3Body" data-bi-name="learn">
 
 
-<div class="animationtoggle">
+<div data-componentname="animationtoggle" class="animationtoggle">
     <div class="reduced-animation-toggle">
         <div class="c-toggle">
             <label class="c-label" id="c-label-1" for="animation-toggle" data-bi-name="c-label-1" data-module-id="true">Animation</label>
@@ -536,7 +536,7 @@ cfg: { // Application Insights Configuration
         </div>
     </div>
 </div>
-    <div id="companion" class="pt-3 " style="padding:0px !important" data-bi-name="companion" data-module-id="true">
+    <div data-componentname="image" id="companion" class="pt-3 " style="padding:0px !important" data-bi-name="companion" data-module-id="true">
         
         <picture class="" style="">
             <source srcset="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/MSFT-Copilot-Learn_Hero_image_920x1080?scl=1&amp;fmt=png-alpha&amp;v=1023-3" media="(min-width: 1400px)">
@@ -548,17 +548,17 @@ cfg: { // Application Insights Configuration
 
     </div>
 
-<div id="composer" class="sticky-bar" data-bi-name="composer" data-module-id="true">
+<div data-componentname="bottomsticky" id="composer" class="sticky-bar" data-bi-name="composer" data-module-id="true">
 	<div class="not-bottom-sticky ovarlap-sticky pb-3" style="">
 		<div class="position-relative bottom-sticky-wrapper">
 
 
-<div class="live-text-ai composer-box" data-prompts="[&quot;Write+a+short+story||Brainstorm+a+plot+and+characters+for+a+short+story.&quot;,&quot;Plan+my+workouts||Help%20me%20make%20a%20fun%20workout%20schedule.&quot;,&quot;Improve+my+writing||Help%20me%20make%20my%20writing%20better&quot;,&quot;Help+me+relax||Help+me+unwind+and+reflect+on+my+day.&quot;,&quot;How+can+AI+help+me||How+can+Copilot+and+Microsoft+AI+help+me?&quot;,&quot;Time+zones.+Why?||How+do+time+zones+work%3F&quot;,&quot;Electricity+101||How+does+electricity+work%3F&quot;,&quot;Create+a+quiz||Make%20me%20a%20quiz&quot;,&quot;Generate+an+image||Make%20me%20an%20image&quot;,&quot;Healthy+diet+tips||Share+top+tips+for+balanced+healthy+eating.&quot;,&quot;Budgets+made+easy||Turn+household+budget+ideas+into+a+clear+document.&quot;,&quot;Why+onions+sting||Why+do+onions+make+you+cry%3F&quot;]">
+<div data-componentname="composerbox" class="live-text-ai composer-box" data-prompts="[&quot;Write+a+short+story||Brainstorm+a+plot+and+characters+for+a+short+story.&quot;,&quot;Plan+my+workouts||Help%20me%20make%20a%20fun%20workout%20schedule.&quot;,&quot;Improve+my+writing||Help%20me%20make%20my%20writing%20better&quot;,&quot;Help+me+relax||Help+me+unwind+and+reflect+on+my+day.&quot;,&quot;How+can+AI+help+me||How+can+Copilot+and+Microsoft+AI+help+me?&quot;,&quot;Time+zones.+Why?||How+do+time+zones+work%3F&quot;,&quot;Electricity+101||How+does+electricity+work%3F&quot;,&quot;Create+a+quiz||Make%20me%20a%20quiz&quot;,&quot;Generate+an+image||Make%20me%20an%20image&quot;,&quot;Healthy+diet+tips||Share+top+tips+for+balanced+healthy+eating.&quot;,&quot;Budgets+made+easy||Turn+household+budget+ideas+into+a+clear+document.&quot;,&quot;Why+onions+sting||Why+do+onions+make+you+cry%3F&quot;]">
 
         <picture class="" style="">
             <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/ST1262405%20Copilot%20Logo?scl=1&amp;fmt=png-alpha" class="card-img img-object-cover" alt="Rainbow Copilot icon">
         </picture>
-	<input class="searchtext" readonly="" data-bi-id="n2a3" data-bi-area="body" title="Copilot">
+	<input class="searchtext" readonly="" title="Copilot" data-bi-id="n2a3" data-bi-area="body">
 
 
 <div class="link-group">
@@ -570,7 +570,7 @@ cfg: { // Application Insights Configuration
 	</div>
 </div>
 
-<div class="area-heading text-md-center text-center pt-5 animate bottom-to-top delay100 show" id="whatsnew" style="background: #FDF8F4;" data-bi-name="whatsnew" data-module-id="true">
+<div data-componentname="areaheading" class="area-heading text-md-center text-center pt-5 animate bottom-to-top delay100 show" id="whatsnew" style="background: #FDF8F4;" data-bi-name="whatsnew" data-module-id="true">
     <div class="container" style="">
         <div class="row p-2 p-md-0">
                 <div class="col-12 col-md-8 mx-auto">
@@ -585,7 +585,7 @@ Copilot keeps getting better</h1>
         </div>
     </div>
 </div>
-<div id="shopping-cards" class="cmo-cards py-5 border-radius-60 justify-content-center version2" style="background: #FDF8F4; --heading-color: #2F291D;" data-bi-name="shopping-cards" data-module-id="true">
+<div data-componentname="cards" id="shopping-cards" class="cmo-cards py-5 border-radius-60 justify-content-center version2" style="background: #FDF8F4; --heading-color: #2F291D;" data-bi-name="shopping-cards" data-module-id="true">
     <div class="container" data-composer="">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4" style="">
                     <div class="col mt-3 animate bottom-to-top staggered" style="">
@@ -704,7 +704,7 @@ Copilot has a new look</h4>
     </div>
 </div>
 
-<div class="area-heading text-md-center pt-3 pt-md-5 text-center" id="image-gen" style="background: #E6E0D2; --heading-color: #311F10; --paragraph-color: #311F10" data-bi-name="image-gen" data-module-id="true">
+<div data-componentname="areaheading" class="area-heading text-md-center pt-3 pt-md-5 text-center" id="image-gen" style="background: #E6E0D2; --heading-color: #311F10; --paragraph-color: #311F10" data-bi-name="image-gen" data-module-id="true">
     <div class="container" style="">
         <div class="row p-2 p-md-0">
                 <div class="col-12 col-md-8 mx-auto">
@@ -726,7 +726,7 @@ Create images with Copilot</h2>
         </div>
     </div>
 </div>
-<div id="image-generation" class="mosaic-gallery container py-5 version3" style="background: #E6E0D2;padding: 3rem 5% !important;max-width: 100% !important;" data-bi-name="image-generation" data-module-id="true">
+<div data-componentname="mosaicimages" id="image-generation" class="mosaic-gallery container py-5 version3" style="background: #E6E0D2;padding: 3rem 5% !important;max-width: 100% !important;" data-bi-name="image-generation" data-module-id="true">
         <div class="row mx-0">
             <div class="col-12 col-lg-6">
                 <div class="row mx-0">
@@ -988,7 +988,7 @@ Create images with Copilot</h2>
         </div>
     </div>
 </div>
-<section id="edge-mode" class="" style="" data-bi-id="r1a3" data-bi-name="edge-mode" data-module-id="true">
+<section data-componentname="feature" id="edge-mode" class="" style="" data-bi-id="r1a3" data-bi-name="edge-mode" data-module-id="true">
 	<div class=" fullbleed" data-composer="" data-bi-id="m1r1a3" data-bi-name="m1r1a3">
 		<div class="card mx-md-0 text-left border-radius-picture-image p-2 p-md-5 bottom-left animate bottom-to-top delay100" style="background: #CAC0D9; --heading-color: #311F10; --paragraph-color: #3C3734" data-bi-id="c1m1r1a3" data-bi-name="c1m1r1a3">
 			<div class="row no-gutters">
@@ -1019,7 +1019,7 @@ Navigate the web with Copilot</h2>
 		</div>
 	</div>
 </section>
-<section id="privacy" class="pt-5 pb-5" style="background: linear-gradient(#FFDA99, #FFF8F3);" data-bi-id="r2a3" data-bi-name="privacy" data-module-id="true">
+<section data-componentname="feature" id="privacy" class="pt-5 pb-5" style="background: linear-gradient(#FFDA99, #FFF8F3);" data-bi-id="r2a3" data-bi-name="privacy" data-module-id="true">
 	<div class="mt-5 mb-md-5 container" data-composer="" data-bi-id="m1r2a3" data-bi-name="m1r2a3">
 		<div class="card mx-md-0 text-left border-radius-picture-image bottom-left animate bottom-to-top delay100 image-scale" style="background:transparent;" data-bi-id="c1m1r2a3" data-bi-name="c1m1r2a3">
 			<div class="row no-gutters">
@@ -1051,7 +1051,7 @@ Your privacy matters</h2>
 	</div>
 </section>
 
-<div class="area-heading text-md-center text-center pt-5 animate bottom-to-top delay100" id="get-copilot" style="" data-bi-name="get-copilot" data-module-id="true">
+<div data-componentname="areaheading" class="area-heading text-md-center text-center pt-5 animate bottom-to-top delay100" id="get-copilot" style="" data-bi-name="get-copilot" data-module-id="true">
     <div class="container" style="">
         <div class="row p-2 p-md-0">
                 <div class="col-12  mx-auto">
@@ -1066,7 +1066,7 @@ Get Copilot</h2>
         </div>
     </div>
 </div>
-<div id="apps" class="cmo-cards pt-5 border-radius-90 animate bottom-to-top image-scale bg-cards-body equal" style="--cards-bg-color: #ffffff" data-bi-name="apps" data-module-id="true">
+<div data-componentname="cards" id="apps" class="cmo-cards pt-5 border-radius-90 animate bottom-to-top image-scale bg-cards-body equal" style="--cards-bg-color: #ffffff" data-bi-name="apps" data-module-id="true">
     <div class="container" data-composer="">
         <div class="row row-cols-1 row-cols-md-3" style="">
                     <div class="col mt-3 px-4 px-md-3 mb-4 animate bottom-to-top starggered">
@@ -1154,7 +1154,7 @@ Try Copilot online</h3>
     </div>
 </div>
 
-<div class="area-heading text-md-center text-center py-5 mt-5 animate bottom-to-top delay100" id="faqs" style="" data-bi-name="faqs" data-module-id="true">
+<div data-componentname="areaheading" class="area-heading text-md-center text-center py-5 mt-5 animate bottom-to-top delay100" id="faqs" style="" data-bi-name="faqs" data-module-id="true">
     <div class="container" style="">
         <div class="row p-2 p-md-0">
                 <div class="col-12  mx-auto">
@@ -1169,7 +1169,7 @@ Frequently asked questions</h2>
         </div>
     </div>
 </div>
-<nav id="list" class="link-list-style version3 text-center text-black pt-5 faq-linklist container tags-container" style="" data-bi-name="list" data-module-id="true">
+<nav data-componentname="linklist" id="list" class="link-list-style version3 text-center text-black pt-5 faq-linklist container tags-container" style="" data-bi-name="list" data-module-id="true">
     <ul class="d-flex flex-wrap list-inline justify-content-center mb-0 " role="tablist">
             <li class="font-weight-semibold mx-4 my-1 d-flex flex-column  faqs-tag" role="presentation">
                     <a class="" href="#faqs1" aria-label="Get to know Copilot FAQs opens in same page" target="_self" data-bi-ecn="Get to know Copilot" data-bi-ehn="Frequently asked questions" data-bi-hn="Frequently asked questions" role="tab" aria-checked="false" data-bi-id="n27a3" data-bi-area="body" data-bi-name="get to know copilot">
@@ -1189,7 +1189,7 @@ Frequently asked questions</h2>
     </ul>
 </nav>
 
-<div class="area-heading  text-left pt-5 pb-3 animate bottom-to-top delay100" id="faqs1" style="" data-bi-name="faqs1" data-module-id="true">
+<div data-componentname="areaheading" class="area-heading  text-left pt-5 pb-3 animate bottom-to-top delay100" id="faqs1" style="" data-bi-name="faqs1" data-module-id="true">
     <div class="container" style="">
         <div class="row p-2 p-md-0">
                 <div class="col-12  mx-auto">
@@ -1203,7 +1203,7 @@ Get the most out of Copilot</h3>
                 </div>
         </div>
     </div>
-</div><div id="acc1" class="container pb-3 faq-version2 animate bottom-to-top delay100" data-bi-name="faqs1" data-module-id="true">
+</div><div data-componentname="accordion" id="acc1" class="container pb-3 faq-version2 animate bottom-to-top delay100" data-bi-name="faqs1" data-module-id="true">
         <div class="btn-group align-items-center mb-g" role="group" data-mount="collapse-controls" data-target="#acc1">
             <button class="btn btn-link" aria-disabled="false" aria-pressed="false" data-action="expand" type="button" aria-label="Expand all frequently asked questions" data-bi-id="n30a3" data-bi-area="body" data-bi-name="expand all" data-bi-bhvr="EXPAND">Expand all</button>
             <span aria-hidden="true"> | </span>
@@ -1326,7 +1326,7 @@ Get the most out of Copilot</h3>
 </div>
 </div>
 
-<div class="area-heading  text-left pt-5 pb-3 animate bottom-to-top delay100" id="faqs16" style="" data-bi-name="faqs16" data-module-id="true">
+<div data-componentname="areaheading" class="area-heading  text-left pt-5 pb-3 animate bottom-to-top delay100" id="faqs16" style="" data-bi-name="faqs16" data-module-id="true">
     <div class="container" style="">
         <div class="row p-2 p-md-0">
                 <div class="col-12  mx-auto">
@@ -1340,7 +1340,7 @@ Using Copilot integrations</h3>
                 </div>
         </div>
     </div>
-</div><div id="acc16" class="container pb-3 faq-version2 animate bottom-to-top delay100" data-bi-name="faqs16" data-module-id="true">
+</div><div data-componentname="accordion" id="acc16" class="container pb-3 faq-version2 animate bottom-to-top delay100" data-bi-name="faqs16" data-module-id="true">
         <div class="btn-group align-items-center mb-g" role="group" data-mount="collapse-controls" data-target="#acc16">
             <button class="btn btn-link" aria-disabled="false" aria-pressed="false" data-action="expand" type="button" aria-label="Expand all frequently asked questions" data-bi-id="n54a3" data-bi-area="body" data-bi-name="expand all" data-bi-bhvr="EXPAND">Expand all</button>
             <span aria-hidden="true"> | </span>
@@ -1385,7 +1385,7 @@ Using Copilot integrations</h3>
 </div>
 </div>
 
-<div class="area-heading  text-left pt-5 pb-3 animate bottom-to-top delay100" id="faqs15" style="" data-bi-name="faqs15" data-module-id="true">
+<div data-componentname="areaheading" class="area-heading  text-left pt-5 pb-3 animate bottom-to-top delay100" id="faqs15" style="" data-bi-name="faqs15" data-module-id="true">
     <div class="container" style="">
         <div class="row p-2 p-md-0">
                 <div class="col-12  mx-auto">
@@ -1399,7 +1399,7 @@ Wake word for Copilot on Windows</h3>
                 </div>
         </div>
     </div>
-</div><div id="acc15" class="container pb-3 faq-version2 animate bottom-to-top delay100" data-bi-name="faqs15" data-module-id="true">
+</div><div data-componentname="accordion" id="acc15" class="container pb-3 faq-version2 animate bottom-to-top delay100" data-bi-name="faqs15" data-module-id="true">
         <div class="btn-group align-items-center mb-g" role="group" data-mount="collapse-controls" data-target="#acc15">
             <button class="btn btn-link" aria-disabled="false" aria-pressed="false" data-action="expand" type="button" aria-label="Expand all frequently asked questions" data-bi-id="n61a3" data-bi-area="body" data-bi-name="expand all" data-bi-bhvr="EXPAND">Expand all</button>
             <span aria-hidden="true"> | </span>
@@ -1573,17 +1573,17 @@ Wake word for Copilot on Windows</h3>
 
 </div>
 </div>
-<div id="composer1" class="sticky-bar" data-bi-name="composer1" data-module-id="true">
+<div data-componentname="bottomsticky" id="composer1" class="sticky-bar" data-bi-name="composer1" data-module-id="true">
 	<div class="not-bottom-sticky pt-5 sticky-bottom" style="">
 		<div class="position-relative bottom-sticky-wrapper">
 
 
-<div class="live-text-ai composer-box" data-prompts="[&quot;Write+a+short+story||Brainstorm+a+plot+and+characters+for+a+short+story.&quot;,&quot;Plan+my+workouts||Help%20me%20make%20a%20fun%20workout%20schedule.&quot;,&quot;Improve+my+writing||Help%20me%20make%20my%20writing%20better&quot;,&quot;Help+me+relax||Help+me+unwind+and+reflect+on+my+day.&quot;,&quot;How+can+AI+help+me||How+can+Copilot+and+Microsoft+AI+help+me?&quot;,&quot;Time+zones.+Why?||How+do+time+zones+work%3F&quot;,&quot;Electricity+101||How+does+electricity+work%3F&quot;,&quot;Create+a+quiz||Make%20me%20a%20quiz&quot;,&quot;Generate+an+image||Make%20me%20an%20image&quot;,&quot;Healthy+diet+tips||Share+top+tips+for+balanced+healthy+eating.&quot;,&quot;Budgets+made+easy||Turn+household+budget+ideas+into+a+clear+document.&quot;,&quot;Why+onions+sting||Why+do+onions+make+you+cry%3F&quot;]">
+<div data-componentname="composerbox" class="live-text-ai composer-box" data-prompts="[&quot;Write+a+short+story||Brainstorm+a+plot+and+characters+for+a+short+story.&quot;,&quot;Plan+my+workouts||Help%20me%20make%20a%20fun%20workout%20schedule.&quot;,&quot;Improve+my+writing||Help%20me%20make%20my%20writing%20better&quot;,&quot;Help+me+relax||Help+me+unwind+and+reflect+on+my+day.&quot;,&quot;How+can+AI+help+me||How+can+Copilot+and+Microsoft+AI+help+me?&quot;,&quot;Time+zones.+Why?||How+do+time+zones+work%3F&quot;,&quot;Electricity+101||How+does+electricity+work%3F&quot;,&quot;Create+a+quiz||Make%20me%20a%20quiz&quot;,&quot;Generate+an+image||Make%20me%20an%20image&quot;,&quot;Healthy+diet+tips||Share+top+tips+for+balanced+healthy+eating.&quot;,&quot;Budgets+made+easy||Turn+household+budget+ideas+into+a+clear+document.&quot;,&quot;Why+onions+sting||Why+do+onions+make+you+cry%3F&quot;]">
 
         <picture class="" style="">
             <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/ST1262405%20Copilot%20Logo?scl=1&amp;fmt=png-alpha" class="card-img img-object-cover" alt="Rainbow Copilot icon">
         </picture>
-	<input class="searchtext" readonly="" data-bi-id="n78a3" data-bi-area="body" title="Copilot">
+	<input class="searchtext" readonly="" title="Copilot" data-bi-id="n78a3" data-bi-area="body">
 
 
 <div class="link-group">
@@ -1595,14 +1595,14 @@ Wake word for Copilot on Windows</h3>
 	</div>
 </div>
 
-    <div id="socialshare" class="text-center d-block" style="background: #fde4f8; color: #5a0e38; padding: 80px 24px;" data-bi-name="socialshare" data-module-id="true">
-        <div class="row justify-content-between px-3" id="mwfsocialshare28" data-bi-name="mwfsocialshare28" data-module-id="true">
+    <div data-componentname="socialbar" id="socialshare" class="text-center d-block" style="background: #fde4f8; color: #5a0e38; padding: 80px 24px;" data-bi-name="socialshare" data-module-id="true">
+        <div class="row justify-content-between px-3" id="mwfsocialshare68" data-bi-name="mwfsocialshare68" data-module-id="true">
 
 <h2 class="h1 w-col-12 w-md-col-6 my-0 mx-auto pb-4 mb-3">
 Follow Copilot</h2>
             <div class="col-12">
                 <div class="row">
-                    <section class="col-12" aria-labelledby="mwfsocialshare28">
+                    <section class="col-12" aria-labelledby="mwfsocialshare68">
                         <ul class="list-inline mb-0 d-inline-block align-middle">
                                 <li class="list-inline-item m-4">
                                     <a href="https://x.com/Copilot" target="_blank" aria-label="Microsoft Copilot X page opens in new tab" class="action-trigger text-decoration-none d-inline-block" data-bi-ecn="X" data-bi-ehn="Follow Copilot" data-bi-hn="Follow Copilot" data-bi-id="n79a3" data-bi-area="body" data-bi-name="microsoft copilot x page opens in new tab" data-bi-bhvr="SOCIALSHARE">
@@ -1648,7 +1648,7 @@ Follow Copilot</h2>
 
 
 
-<div class="theme-dark theme-dark" id="footnotes" data-bi-name="footnotes" data-module-id="true">
+<div data-componentname="footnotes" class="theme-dark theme-dark" id="footnotes" data-bi-name="footnotes" data-module-id="true">
     <div class="material-surface">
         <div class="container">
             <div class="row">
@@ -1972,7 +1972,7 @@ Follow Copilot</h2>
     
 
     
-        <script src="/en-us/microsoft-copilot/for-individuals/js/global.min.js?v=hMDqz0J3yKKOWUt1mvNoG0n_zJsHAIGMp8WS9pDzujQ"></script>
+        <script src="/en-us/microsoft-copilot/for-individuals/js/global.min.js?v=tr8LKfBl2ZwVTDtmSjH0gvN9Q7jXZvEt5ZOOOHIpcZo"></script>
     
 
     <script src="/en-us/microsoft-copilot/for-individuals/js/SmoothScrolling.min.js"></script>
