@@ -148,7 +148,7 @@
     <meta name="viewport" content="width=device-width, minimum-scale=0.1">
     <meta name="csp-nonce" content="" />
     <meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="ErDMVUSDkD_wiUOuNhGBpqezxDlGxqUVkSs7oUtwadX8pkgwmHFWLvoencI8Lm7FC8OzZ7_kLQZSuPK-xtDMpA" />
+<meta name="csrf-token" content="9hdyjpNCykEkUVTfWx8cBB2w0ENRhIOlQvz6EswWISPL7laCTB_5Ks4cvx4a6J-50qu0rSxpVltuwnepePvniQ" />
     
     <link rel="icon" type="image/x-icon" href="/assets/favicon-399fd999b5d51c1594e9102aa9139a4ace8d9c81dd5c9b8dfda6a34917acc5d2.ico" />
 <link rel="icon" type="image/png" href="/assets/favicon-32x32-7cdd952a4c7329c7538aeea99fca42344faefb5c4e8c5157067a823d50cb2b40.png" sizes="32x32" />
@@ -157,9 +157,9 @@
 
     <meta name="sentry-environment" content="production">
 
-      <script src="/assets/runtime-d8468d0e388528a44cfb91d5b99fa10376afbbfbfe57d85dcbcb606829dafdc6.js" data-turbo-track="reload" nonce=""></script>
-<script src="/assets/vendor-c7a636fa8042a5e40ed4eeb0885127d161f71e2d7e4553728853c3efbca9ce92.js" data-turbo-track="reload" nonce=""></script>
-<script src="/assets/sentry-d089380467a73436140a913d076b5642b21cca099766dc227456105c7c939113.js" data-turbo-track="reload" nonce=""></script>
+      <script src="/assets/runtime-498735c60ad1378fc93999decc85396796885777d3babf82ba5f0b99000826e7.js" data-turbo-track="reload" nonce=""></script>
+<script src="/assets/vendor-c84f048817ea6d2676cf0fc5b9260c41ef2c74626c39c10414ecbe4a3dd35ed8.js" data-turbo-track="reload" nonce=""></script>
+<script src="/assets/sentry-0d83a0a6ceef26d379ae92f66e01bb76366a5e8dd44b2f9c5669942556a46e9a.js" data-turbo-track="reload" nonce=""></script>
       <script src="https://api.goaffpro.com/loader.js?shop=esmixx3wyt" nonce=""></script>
     <link rel="stylesheet" href="/assets/application-7f4f48ee9e4131015bbd226921eb969c7ed3459aaab591c5c409ba4e1911c789.css" media="all" data-turbolinks-track="reload" nonce="" />
     <script src="https://code.iconify.design/iconify-icon/1.0.0/iconify-icon.min.js" nonce=""></script>
@@ -582,7 +582,14 @@ button.icon-close:active {
   const trackingCheck = document.getElementById('tracking');
   const adsCheck = document.getElementById('ads');
 
-  if (window.localStorage.getItem('cookie-consent')) {
+  let hasStoredConsent = false;
+  try {
+    hasStoredConsent = !!window.localStorage.getItem('cookie-consent');
+  } catch {
+    // localStorage unavailable (private browsing, restricted WebView, etc.) — treat as no stored consent.
+  }
+
+  if (hasStoredConsent) {
     cookieConsentContainer.remove();
   } else {
     cookieConsentContainer.classList.add('show');
@@ -597,12 +604,17 @@ button.icon-close:active {
   }
 
   function closeCookieConsentAndSaveStatus() {
-    window.localStorage.setItem('cookie-consent', JSON.stringify({
-      'ad_storage': adsCheck.checked ? 'granted' : 'denied',
-      'ad_user_data': adsCheck.checked ? 'granted' : 'denied',
-      'ad_personalization': adsCheck.checked ? 'granted' : 'denied',
-      'analytics_storage': trackingCheck.checked ? 'granted' : 'denied'
-    }));
+    try {
+      window.localStorage.setItem('cookie-consent', JSON.stringify({
+        'ad_storage': adsCheck.checked ? 'granted' : 'denied',
+        'ad_user_data': adsCheck.checked ? 'granted' : 'denied',
+        'ad_personalization': adsCheck.checked ? 'granted' : 'denied',
+        'analytics_storage': trackingCheck.checked ? 'granted' : 'denied'
+      }));
+    } catch {
+      // localStorage unavailable (private browsing, restricted WebView, etc.) — the choice
+      // won't persist across reloads, but don't crash the rest of the page for it.
+    }
     cookieConsentContainer.remove();
   }
 
@@ -648,14 +660,14 @@ button.icon-close:active {
 
 //]]>
 </script>
-    <script src="/assets/application-496dbcdb0c139c3b8ef9010d6945c6de23cc0d4fca7ec0aac5a2b5ad481b1b91.js" data-turbo-track="reload" nonce=""></script>
+    <script src="/assets/application-a5345d90127fd499e284da220c5177a294d2c7695d6c232707f77ec50d0f947c.js" data-turbo-track="reload" nonce=""></script>
   </head>
 
   <body lang="en" class="bg-dark 100vh" >
     <link rel="stylesheet" href="/assets/tailwind-4e2dd23f04c5147480be3df83a50a2ee3dc069b2b3dc87395b05300add9b314d.css" />
     <div class="sticky top-0 left-0 w-full bg-dark z-40">
       <div id="header">
-        <script src="/assets/header-8979ec0351709307f6559caabc00ccfb5b5a85b6a7a077db337ed4a95fd5fb65.js" nonce=""></script>
+        <script src="/assets/header-1c330ddd564548ad2a0ad59a403d669a68b9387c30fb4a7d8cf997960c8764ab.js" nonce=""></script>
       </div>
       
     </div>
